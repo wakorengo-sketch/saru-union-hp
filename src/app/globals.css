@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* Inter for Latin, then a robust Japanese gothic fallback chain */
+  --font-sans: var(--font-inter), "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    "YuGothic", "Noto Sans JP", "Meiryo", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  /* prevent horizontal scroll without creating a scroll container
+     (unlike overflow-x:hidden, `clip` keeps window-level vertical scroll) */
+  overflow-x: clip;
+}
+
+/* Typewriter cursor blink */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blink {
+    animation: none;
+  }
+}

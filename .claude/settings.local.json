@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)",
+      "Bash(npm --version)",
+      "Bash(cd \"C:/Users/dumbo/Downloads/サークル連合HP\" && mv .claude ../__claude_bak_saru && echo \"moved .claude aside\" && ls -a)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --turbopack --use-npm --yes)"
+    ]
+  }
+}
